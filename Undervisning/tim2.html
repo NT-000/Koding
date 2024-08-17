@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Per har betalt <input type="number" id="per"></br>
+    Pål har betalt <input type="number" id="pål"></br>
+    Espen har betalt <input type="number" id="espen"></br>
+    <button onclick="calculate">Beregne</button>
+    
+
+    <div id="app"></div>
+
+    <script>
+        //let amountPaidPer;//deklarere
+        function calculate() {
+            let amountPaidPer = document.getElementById('per').valueAsNumber;
+            let amountPaidPer = document.getElementById('pål').valueAsNumber;
+            let amountPaidPer = document.getElementById('espen').valueAsNumber;
+        
+            let amountPaidPer = 3000; //deklarere og tilordne
+        let amountPaidPål = 300;
+        let amountPaidEspen = 0;
+        let totalAmountPaid = amountPaidPer + amountPaidPål + amountPaidEspen;
+        let costPerPerson = totalAmountPaid / 3;
+        let owesPer = costPerPerson - amountPaidPer;
+        let owesPål = costPerPerson - amountPaidPål;
+        let owesEspen = costPerPerson - amountPaidEspen;
+        
+        document.getElementById('app').innerHTML = 
+        Per har betalt: $(amountPaidPer)
+        Pål har betalt: $(amountPaidPål)
+        Espen har betalt: $(amountPaidEspen)
+
+        Per skylder $(owesPer)
+        Pål skylder $(owesPål)
+        Espen skylder $(owesEspen)
+
+        }
+        
+        /*
+        3 ting vi gjør med variabler:
+        1: deklarere
+        2: tilordne = legge verdi inn i en variabel.
+        2:bruke verdien dvs ut fra variablen.*/
+
+
+    </script>
+</body>
+</html>

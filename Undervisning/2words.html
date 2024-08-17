@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    <span style="color: green; font-size: 400px;">Det</span>
+    <span style="color: rgb(128, 0, 34); font-size: 240%;">var</span>
+    <span style="color: rgb(28, 0, 128); font-size: 400px;">en</span>
+
+    <script>
+        add('green', 400,'Det', 'span');
+        add('red', 240, 'var','div');
+        add('blue', 600, 'en', 'li');
+
+        function add(color,size,word, tagName) {
+            let existingHtml = document.getElementById('app').innerHTML += /*HTML*/
+            let newHtml = /*HTML*/`
+            <span style="color: $(color); font-size: $(size)400px;">$(word)</$(tagName)>
+            `;
+  
+            document.getElementById('app').innerHTML = newHtml + existingHtml;
+        }
+    
+    </script>
+</body>
+</html>
